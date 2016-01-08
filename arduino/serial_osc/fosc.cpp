@@ -42,6 +42,12 @@
 
 using namespace fou::osc;
 
+/*
+ *  arduino uses Little Endian byte order whereas OSC uses big endian AKA network byte order/
+ *  these functions convert 32 bit data accordingly. 
+ */
+
+// Network to Host
 inline void copyNTOHL(char *dst, char *src) {
   dst[0] = src[3];
   dst[1] = src[2];
@@ -49,6 +55,7 @@ inline void copyNTOHL(char *dst, char *src) {
   dst[3] = src[0];
 }
 
+// Host to Network
 inline void copyHTONL(char *dst, char *src) {
   dst[0] = src[3];
   dst[1] = src[2];

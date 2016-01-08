@@ -35,7 +35,6 @@
 #include "assert.h"
 
 namespace fou {
-
 namespace slip {
   
 enum SpecialCharacters {

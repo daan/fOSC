@@ -53,7 +53,7 @@ typedef struct {
 
 typedef enum {
 	/* TODO: internal OSC types */	
-	kFOSC_DONE =		0, 	/** iterator : no more tags in the string */
+	kFOSC_DONE =	0, 	/** iterator : no more tags in the string */
 	kFOSC_UNKNOWN =	1, 	/** unknown tag */
 	
 	// basic OSC types 
@@ -66,7 +66,7 @@ typedef enum {
 	kFOSC_INT64 =     'h', /** 64 bit signed integer. */
 	kFOSC_TIMETAG =   't', 	/** OSC TimeTag type. */
 	kFOSC_DOUBLE =    'd', 	/** 64 bit IEEE-754 double. */
-  kFOSC_SYMBOL =    'S', /** Standard C, NULL terminated, string. */
+        kFOSC_SYMBOL =    'S', /** Standard C, NULL terminated, string. */
 	kFOSC_CHAR =      'c', /** Standard C, 8 bit, char variable. */
 	kFOSC_MIDI =      'm', 	/** A 4 byte MIDI packet. */
 	kFOSC_TRUE =      'T', 	/** Sybol representing the value True. */
@@ -119,7 +119,6 @@ public:
   bool f(float &f);
   int s(char** s);
   int32_t b(uint8_t* data);
-  
   
   /**
    *  Get the address string.
@@ -223,10 +222,6 @@ private:
     }
   };
 };
-
-
-
-
 
 } } // end namespace fou / osc
 
